@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
+  <title>header image</title>
+</head>
+
+<body>
+  <nav class="fixed top-0 z-10 flex flex-wrap items-center justify-between w-full p-2 bg-black">
+    <div class="flex items-center flex-shrink-0 mr-6 text-white">
+      <img class="w-44 ml-3 mt-1"
+        src="https://www.i-voyages.net/wp-content/uploads/2020/04/logo-ivoyages-B-maxi-format.png" alt="" />
+    </div>
+
+    <div class="block md:hidden">
+      <button id="nav-toggle"
+        class="flex items-center px-4 py-3 mr-2 text-white border border-white rounded hover:text-white hover:border-white">
+        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex-grow hidden w-full pt-6 pb-5 md:flex md:items-center md:w-auto md:block md:pt-0 md:pb-0"
+      id="nav-content">
+      <ul class="items-center justify-end flex-1 list-reset md:flex">
+        <li class="mr-3">
+          <a class="inline-block px-4 py-4 text-lg text-white no-underline hover:text-blue-300 hover:text-underline"
+            href="#">Destination</a>
+        </li>
+        <li class="mr-3">
+          <a class="inline-block px-4 py-4 text-lg text-white no-underline hover:text-blue-300 hover:text-underline"
+            href="#">Nos Hotels</a>
+        </li>
+        <li class="mr-3">
+          <a class="inline-block px-4 py-4 text-lg text-white no-underline hover:text-blue-300 hover:text-underline"
+            href="#">
+            Nos Promos</a>
+        </li>
+        <li class="mr-3">
+          <a class="inline-block px-4 py-4 text-lg text-white no-underline hover:text-blue-300 hover:text-underline"
+            href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <div class="w-full bg-cover bg-center bg-fixed" style="
+          height: 100vh;
+          background-image: url(https://www.eclairtravel.dz/gla-adminer/uploads/article/full/700740003_26-02-2020_508580.jpg);
+        ">
+      <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-40">
+        <div id="reservation" class="w-3/4 h-2/4 absolute mb-56 hidden">
+          <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
+            <button id="close" type="button"
+              class="w-10 h-10 float-right -mt-6 -m-5 border border-gray-300 rounded hover:bg-gray-200">
+              <p class="text-1xl p-1 text-center text-gray-500">X</p>
+            </button>
+            <section>
+              <h3 class="font-bold text-2xl text-center mt-6">
+                Welcome to Asia Voyage
+              </h3>
+              <p class="text-gray-600 pt-6 mt-6">
+                Choisiser votre destination :
+              </p>
+            </section>
+
+            <section class="mt-10">
+              <form class="flex flex-col" method="POST" action="#">
+                <div class="mb-6 pt-3 rounded bg-gray-200">
+                  <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="">Destination</label>
+                  <select
+                    class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 px-2 pb-3"
+                    name="destination" id="destination-select">
+                    <option value="">Choisiser votre destination</option>
+                    <option value="Inde">Inde</option>
+                    <option value="Chine">Chine</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Thaïlande">Thaïlande</option>
+                    <option value="Australie">Australie</option>
+                  </select>
+                </div>
+                <div class="mb-6 pt-3 rounded bg-gray-200">
+                  <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="password">Date de départ</label>
+                  <input type="date" id="date" placeholder="Date de départ…"
+                    class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 px-3 pb-3" />
+                </div>
+                <div class="flex justify-end">
+                  <a href="#" class="text-sm text-blue-400 hover:text-blue-600 hover:underline mb-6">Decouvrer nos
+                    offres</a>
+                </div>
+                <button
+                  class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200"
+                  type="submit">
+                  Valider
+                </button>
+              </form>
+            </section>
+          </main>
+        </div>
+        <div class="text-center">
+          <h1 class="text-white text-5xl font-semibold uppercase md:text-6xl">
+            Asia Voyage <br /><span class="text-yellow-200 text-lg italic md:text-xl">N°1 Du voyage</span>
+          </h1>
+          <a href="#decouvrer" class="">
+            <button id="button"
+              class="mt-10 px-6 py-2 bg-blue-600 text-white text-lg uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+              Reservé
+            </button></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="text-4xl md:text-5xl text-center mt-24 pb-12 shadow-lg">
+    Destination :
+  </div>
+
+  <main class="px-3 md:mt-28">
+    <div class="md:text-4xl text-2xl text-center my-10 text-gray-600">
+      Quelle destination allez-vous découvrir ?
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-12 m-5 max-w-5xl m-auto">
+      <div class="bg-white">
+        <img src="https://images1.bovpg.net/r/back/fr/sale/b081a64c8c5ce0.jpg" alt=""
+          class="w-full h-48 sm:h-56 object-cover" />
+
+        <div class="px-10 py-6 mb-10 text-center">
+          <div class="text-2xl font-bold text-purple-500 mb-4">OMAN</div>
+          <span class="text-sm">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Voluptate tempore eligendi magnam distinctio molestias. Incidunt
+            at consequuntur consequatur officiis repudiandae! Culpa cum vel
+            tenetur itaque eius provident voluptatum similique impedit?
+          </span>
+        </div>
+
+        <button class="w-full text-lg h-16 text-white rounded-lg font-extrabold bg-purple-500 hover:bg-purple-600">
+          VIEW RECIPES
+        </button>
+      </div>
+
+      <div class="bg-white">
+        <img
+          src="https://us.123rf.com/450wm/4045qd/4045qd1802/4045qd180200348/95281145-vue-paysage-d-une-ancienne-ville-de-nanjing-chine.jpg?ver=6"
+          alt="" class="w-full h-48 sm:h-56 object-cover" />
+        <div class="px-10 py-6 mb-10 text-center">
+          <div class="text-2xl font-bold text-green-500 mb-4">CHINESE</div>
+          <span class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit.Voluptate tempore eligendi magnam distinctio molestias.
+            Inciduntat consequuntur consequatur officiis repudiandae! Culpa
+            cum veltenetur itaque eius provident voluptatum similique
+            impedit?</span>
+        </div>
+        <button class="w-full text-lg h-16 text-white rounded-lg font-extrabold bg-green-500 hover:bg-green-600">
+          VIEW RECIPES
+        </button>
+      </div>
+
+      <div class="bg-white">
+        <img src="https://resources.mynewsdesk.com/image/upload/attuv5qqdrpy9ioiekjk.gif" alt=""
+          class="w-full h-48 sm:h-56 object-cover" />
+        <div class="px-10 py-6 mb-10 text-center">
+          <div class="text-2xl font-bold text-blue-500 mb-4">INDIAN</div>
+
+          <span class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Voluptate tempore eligendi magnam distinctio molestias. Incidunt
+            at consequuntur consequatur officiis repudiandae! Culpa cum vel
+            tenetur itaque eius provident voluptatum similique impedit?</span>
+        </div>
+
+        <button class="w-full text-lg h-16 text-white rounded-lg font-extrabold bg-blue-500 hover:bg-blue-600">
+          VIEW RECIPES
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <div class="text-center">
+    <button class="w-40 text-lg h-16 mt-16 text-white rounded-lg font-extrabold bg-green-500 hover:bg-green-600">
+      VOIR PLUS ...
+    </button>
+  </div>
+
+  <section class="md:mx-12 md:flex mt-28">
+    <div class="bg-red-300 md:w-1/2">
+      <img class="md:h-full md:rounded-l-lg"
+        src="https://images.lpcdn.ca/924x615/201302/12/647320-couples-voyagent-deux-durent-plus.jpg" alt="" />
+    </div>
+    <div class="bg-black pb-20 md:h-auto md:w-1/2 md:rounded-r-lg">
+      <p class="md:my-16 md:text-3xl text-center p-6 text-2xl text-gray-200">
+        Ce que les gens disent :
+      </p>
+      <p class="md:leading-loose md:mx-12 mx-6 text-white italic">
+        " Des jolies photos de voyage,des offres claires sur les prix,les
+        prestations,et le voyage. Rapidité pour les différentes options et
+        description claire des produits proposés. j'ai été satisfait des
+        services offerts par le site voyages privés , tant sur le plan du site
+        que le service clients au téléphone, je ne peux que recommander ce
+        site. La mention "adulte only" intéressant pour les couples sans
+        enfant. Je n ai jamais été déçu par voyage privé pour mes vacances. "
+      </p>
+      <p class="text-white float-right p-6 md:mt-6 text-blue-300">
+        Michael et laura dellatre
+      </p>
+    </div>
+  </section>
+
+  <div class="text-4xl md:text-5xl text-center mt-24 pb-12 shadow-lg">
+    Nos Promotions :
+  </div>
+
+  <div class="container my-16 mx-auto px-4 mt-12 md:px-12">
+    <div class="flex flex-wrap -mx-1 lg:-mx-4">
+      <!-- Column -->
+      <div class="my-1 px-1 w-full p-6 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        <!-- Article -->
+        <article class="overflow-hidden rounded-lg shadow-lg bg-white">
+          <a href="#">
+            <img alt="Placeholder" class="block h-64 w-full"
+              src="https://i0.wp.com/www.travel-me-happy.com/wp-content/uploads/2016/09/Kampong-Glam-Singapour-e1473464439451.jpg?fit=800%2C600&ssl=1" />
+          </a>
+
+          <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+            <h1 class="text-lg ml-2">
+              <a class="no-underline text-green-700 text-2xl" href="#">
+                Singapour :
+              </a>
+            </h1>
+            <p class="text-green-400 text-2xl">899 $</p>
+          </header>
+
+          <footer class="flex items-center justify-between leading-none pb-6 p-2 md:p-4">
+            <a href="">
+              <p class="ml-3 text-xl text-blue-500">
+                7 jours / 2 personnes / Hotel inclus
+              </p>
+            </a>
+          </footer>
+        </article>
+        <!-- END Article -->
+      </div>
+
+      <!-- Column -->
+      <div class="my-1 px-1 w-full p-6 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        <!-- Article -->
+        <article class="overflow-hidden rounded-lg shadow-lg bg-white">
+          <a href="#">
+            <img alt="Placeholder" class="block h-64 w-full"
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/4b/5d/10/caption.jpg?w=500&h=300&s=1&cx=1005&cy=690&chk=v1_2ed86f729380ea073850" />
+          </a>
+
+          <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+            <h1 class="text-lg ml-2">
+              <a class="no-underline text-green-700 text-2xl" href="#">
+                Tokyo :
+              </a>
+            </h1>
+            <p class="text-green-400 text-2xl">999 $</p>
+          </header>
+
+          <footer class="flex items-center justify-between leading-none pb-6 p-2 md:p-4">
+            <p class="ml-2 text-xl text-blue-600">
+              9 jours / 2 personnes / Hotel inclus
+            </p>
+          </footer>
+        </article>
+        <!-- END Article -->
+      </div>
+
+      <!-- Column -->
+      <div class="my-1 px-1 w-full p-6 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        <!-- Article -->
+        <article class="overflow-hidden rounded-lg shadow-lg bg-white">
+          <a href="#">
+            <img alt="Placeholder" class="block h-64 w-full"
+              src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/de/c2/60.jpg" />
+          </a>
+
+          <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+            <h1 class="text-lg ml-2">
+              <a class="no-underline text-green-700 text-2xl" href="#">
+                Bangkok :
+              </a>
+            </h1>
+            <p class="text-green-400 text-2xl">1199 $</p>
+          </header>
+
+          <footer class="flex items-center justify-between leading-none pb-6 p-2 md:p-4">
+            <p class="ml-2 text-xl text-blue-600">
+              12 jours / 2 personnes / Hotel inclus
+            </p>
+          </footer>
+        </article>
+        <!-- END Article -->
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button class="w-48 text-lg h-16 -mt-6 text-white rounded-lg font-extrabold bg-green-500 hover:bg-green-600">
+      VOIR PLUS ...
+    </button>
+  </div>
+
+  <div class="text-4xl sm:text-5xl text-center my-10 mt-28 shadow-lg pb-10">
+    Nous Contacter :
+  </div>
+
+  <div class="grid min-h-screen place-items-center -mt-10">
+    <div class="w-11/12 p-12 bg-indigo-100 rounded-lg sm:w-8/12 md:w-1/2 lg:w-5/12">
+      <h1 class="text-2xl pb-6 font-semibold text-center">
+        Des Questions ? Contactez-nous !
+      </h1>
+      <form class="mt-6">
+        <div class="flex justify-between gap-3">
+          <span class="w-1/2">
+            <label for="firstname" class="block text-xs font-semibold text-gray-600 uppercase">Firstname</label>
+            <input id="firstname" type="text" name="firstname" placeholder="John" autocomplete="given-name"
+              class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+              required />
+          </span>
+          <span class="w-1/2">
+            <label for="lastname" class="block text-xs font-semibold text-gray-600 uppercase">Lastname</label>
+            <input id="lastname" type="text" name="lastname" placeholder="Doe" autocomplete="family-name"
+              class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+              required />
+          </span>
+        </div>
+        <label for="email" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">E-mail</label>
+        <input id="email" type="email" name="email" placeholder="john.doe@company.com" autocomplete="email"
+          class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+          required />
+        <label for="password" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Password</label>
+        <input id="password" type="password" name="password" placeholder="********" autocomplete="new-password"
+          class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+          required />
+        <label for="password-confirm" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Confirm
+          password</label>
+        <input id="password-confirm" type="password" name="password-confirm" placeholder="********"
+          autocomplete="new-password"
+          class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+          required />
+        <button type="submit"
+          class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+          Sign up
+        </button>
+        <p class="flex justify-between inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
+          Already registered?
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="h-16 text-white bg-black items-center flex justify-center">
+    <p>© copyrigh Asia-Voyage tous droit reverve 2020</p>
+  </footer>
+
+  <script>
+    //Javascript to toggle the menu
+    document.getElementById("nav-toggle").onclick = function () {
+      document.getElementById("nav-content").classList.toggle("hidden");
+    };
+  </script>
+
+  <script>
+    document.getElementById("button").onclick = function () {
+      document.getElementById("reservation").classList.toggle("hidden");
+    };
+    document.getElementById("close").onclick = function () {
+      document.getElementById("reservation").classList.toggle("hidden");
+    };
+  </script>
+</body>
+
+</html>
