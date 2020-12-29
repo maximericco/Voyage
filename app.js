@@ -4,7 +4,7 @@ const allItems = document.querySelectorAll("li");
 
 const TL1 = new TimelineMax({ paused: true });
 
-TL1.from(titre, 1, { y: -50, opacity: 0 })
+TL1.from(titre, 2, { y: -50, opacity: 0 })
   .from(txt, 1, { opacity: 0 }, "-=0.4")
   .staggerFrom(allItems, 1, { y: -50, opacity: 0 }, 0.2, "-=1");
 
