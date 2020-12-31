@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <nav class="fixed top-0 z-10 flex flex-wrap items-center justify-between w-full p-2 bg-black">
+  <nav class="z-50 fixed top-0 z-10 flex flex-wrap items-center justify-between w-full p-2 bg-black">
     <div class="flex items-center flex-shrink-0 mr-6 text-white">
       <img class="w-44 ml-3 mt-1"
         src="https://www.i-voyages.net/wp-content/uploads/2020/04/logo-ivoyages-B-maxi-format.png" alt="" />
@@ -57,22 +57,22 @@
       <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-40">
         <div id="reservation" class="w-3/4 h-2/4 absolute mb-56 hidden">
           <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
-            <button id="close" type="button"
+            <button id="close" type="butto"
               class="w-10 h-10 float-right -mt-6 -m-5 border border-gray-300 rounded hover:bg-gray-200">
-              <p class="text-1xl p-1 text-center text-gray-500">X</p>
+              <h2 class="text-1xl p-1 text-center text-gray-500">X</h2>
             </button>
             <section>
               <h3 class="font-bold text-2xl text-center mt-6">
                 Welcome to Asia Voyage
               </h3>
-              <p class="text-gray-600 pt-6 mt-6">
+              <h2 class="text-gray-600 pt-6 mt-6">
                 Choisiser votre destination :
-              </p>
+              </h2>
             </section>
 
             <section class="mt-10">
               <form class="flex flex-col" method="POST" action="#">
-                <div class="z-50 mb-6 pt-3 rounded bg-gray-200">
+                <div class="z-40 mb-6 pt-3 rounded bg-gray-200">
                   <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="">Destination</label>
                   <select
                     class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 px-2 pb-3"
@@ -86,7 +86,7 @@
                     <option value="Australie">Australie</option>
                   </select>
                 </div>
-                <div class="mb-6 pt-3 rounded bg-gray-200">
+                <div class="z-40 mb-6 pt-3 rounded bg-gray-200">
                   <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="password">Date de départ</label>
                   <input type="date" id="date" placeholder="Date de départ…"
                     class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 px-3 pb-3" />
@@ -106,13 +106,16 @@
         </div>
         <div class="text-center">
           <h1 class="text-white text-5xl font-semibold uppercase md:text-6xl">
-            Asia Voyage <br /><span class="animate-pulse text-yellow-200 text-lg italic md:text-xl">N°1 Du voyage</span>
+            Asia Voyage
           </h1>
+          <br>
+          <span class="animate-pulse text-yellow-200 text-lg italic md:text-xl">N°1 Du voyage</span><br>
           <a href="#">
-            <button id="button"
-              class="transition duration-500 mt-10 px-6 py-2 bg-blue-600 text-white text-lg uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+            <button id="buttonFirst"
+              class="mt-10 px-6 py-2 bg-blue-600 text-white text-lg uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
               Reservé
-            </button></a>
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -123,9 +126,9 @@
   </div>
 
   <main class="px-3 md:mt-28">
-    <div class="md:text-4xl text-2xl text-center my-10 text-gray-600">
+    <p class="md:text-4xl text-2xl text-center my-10 text-gray-600">
       Quelle destination allez-vous découvrir ?
-    </div>
+    </p>
 
     <div class="grid md:grid-cols-3 gap-12 m-5 max-w-5xl m-auto">
       <div class="bg-white">
@@ -213,9 +216,9 @@
     </div>
   </section>
 
-  <div class="text-4xl md:text-5xl text-center mt-24 pb-12 shadow-lg">
+  <p class="text-4xl md:text-5xl text-center mt-24 pb-12 shadow-lg">
     Nos Promotions :
-  </div>
+  </p>
 
   <div class="container my-16 mx-auto px-4 mt-12 md:px-12">
     <div class="flex flex-wrap -mx-1 lg:-mx-4">
@@ -310,15 +313,15 @@
     </button>
   </div>
 
-  <div class="text-4xl sm:text-5xl text-center my-10 mt-28 shadow-lg pb-10">
+  <p class="text-4xl sm:text-5xl text-center my-10 mt-28 shadow-lg pb-10">
     Nous Contacter :
-  </div>
+  </p>
 
   <div class="grid min-h-screen place-items-center -mt-10">
     <div class="w-11/12 p-12 bg-indigo-100 rounded-lg sm:w-8/12 md:w-1/2 lg:w-5/12">
-      <h1 class="text-2xl pb-6 font-semibold text-center">
+      <p class="text-2xl pb-6 font-semibold text-center">
         Des Questions ? Contactez-nous !
-      </h1>
+      </p>
       <form class="mt-6">
         <div class="flex justify-between gap-3">
           <span class="w-1/2">
@@ -363,7 +366,7 @@
     <p>© copyrigh Asia-Voyage tous droit reverve 2020</p>
   </footer>
 
-
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js">
   </script>
 
@@ -378,7 +381,7 @@
   </script>
 
   <script>
-    document.getElementById("button").onclick = function () {
+    document.getElementById("buttonFirst").onclick = function () {
       document.getElementById("reservation").classList.toggle("hidden");
     };
     document.getElementById("close").onclick = function () {
