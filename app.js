@@ -14,7 +14,7 @@ TL1.play();
 
 const sr = ScrollReveal({
   duration: 1000,
-  reset: true,
+  reset: false,
 });
 
 sr.reveal("p", {
